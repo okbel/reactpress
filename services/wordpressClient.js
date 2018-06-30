@@ -12,3 +12,12 @@ export async function getPosts(options = null) {
   );
   return data;
 }
+
+export async function getPost(id, options = null) {
+  let queryString = "";
+  if (options) {
+    queryString = "?" + qs.stringify(options);
+  }
+  const { data } = await axios.get(`${config.WORDPRESS_API_URL}/posts/${id}`);
+  return data;
+}
