@@ -4,13 +4,16 @@
   "description": "A starter for wordpress + react , using Next.js",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node_modules/.bin/next",
+    "build": "node_modules/.bin/next build",
+    "start": "node_modules/.bin/next start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "prettier": "^1.13.7"
+    "next": "^6.1.1",
+    "prettier": "^1.13.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }
