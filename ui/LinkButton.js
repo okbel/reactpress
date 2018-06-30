@@ -1,22 +1,34 @@
 import Link from "next/link";
-
-const styles = {
-  root: {
-    display: "inline-block",
-    border: "solid black 1px",
-    padding: "1rem",
-    cursor: "pointer"
-  }
-};
+import styled from "styled-components";
 
 const LinkButton = ({ children, ...rest }) => {
   return (
-    <div style={styles.root}>
+    <Button>
       <Link {...rest} prefetch>
-        <a> {children}</a>
+        <A> {children}</A>
       </Link>
-    </div>
+    </Button>
   );
 };
+
+const Button = styled.div`
+  display: inline-block;
+  border: solid black 1px;
+  padding: 1rem;
+  cursor: pointer;
+  &:hover {
+    background: black;
+    color: white;
+  }
+`;
+
+const A = styled.a`
+  &:hover {
+    background: black;
+    color: white;
+  }
+  color: black;
+  text-decoration: none;
+`;
 
 export default LinkButton;
