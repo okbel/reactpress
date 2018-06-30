@@ -1,18 +1,17 @@
-import DefaultLayout from "../layouts/Layout";
+import Layout from "../components/layouts/Layout";
 import { getPosts } from "../services/wordpressClient";
-import PostList from "../ui/PostList";
+import PostList from "../components/ui/PostList";
 
 export default class extends React.Component {
   static async getInitialProps({ req }) {
     const posts = await getPosts({ perPage: 20 });
     return { posts };
   }
-
   render() {
     return (
-      <DefaultLayout>
+      <Layout>
         <PostList posts={this.props.posts} />
-      </DefaultLayout>
+      </Layout>
     );
   }
 }
