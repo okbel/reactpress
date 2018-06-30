@@ -1,4 +1,3 @@
-import LinkButton from "../ui/LinkButton";
 const Post = ({ post }) => (
   <div>
     <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

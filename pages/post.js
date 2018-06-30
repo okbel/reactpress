@@ -1,11 +1,12 @@
 import DefaultLayout from "../components/layouts/Layout";
 import { withRouter } from "next/router";
-import { getPost } from "../services/wordpressClient";
+import { getPostBySlug } from "../services/wordpressClient";
 import Post from "../components/ui/Post";
 
 class PostPage extends React.Component {
   static async getInitialProps({ query }) {
-    const post = await getPost(query.id);
+    const post = await getPostBySlug(query.slug);
+    console.log(JSON.stringify(post));
     return { post };
   }
 

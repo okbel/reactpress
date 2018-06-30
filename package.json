@@ -4,7 +4,7 @@
   "description": "React press is a starter for wordpress + react , using Next.js",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/next",
+    "dev": "node_modules/.bin/nodemon server.js",
     "build": "node_modules/.bin/next build",
     "start": "node_modules/.bin/next start"
   },
@@ -12,10 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "express": "^4.16.3",
     "next": "^6.1.1",
     "prettier": "^1.13.7",
     "qs": "^6.5.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
-  }
+  },
+  "devDependencies": {}
 }
