@@ -1,0 +1,16 @@
+{
+  "name": "react-wordpress-starter",
+  "version": "1.0.0",
+  "description": "A starter for wordpress + react , using Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^1.13.7"
+  }
+}
