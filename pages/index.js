@@ -1,17 +1,19 @@
 import Layout from "../components/layouts/Layout";
 import { getPosts } from "../services/wordpressClient";
 import PostList from "../components/ui/PostList";
+import { withRouter } from "next/router";
 
-export default class extends React.Component {
+class PostListPage extends React.Component {
   static async getInitialProps({ req }) {
-    const posts = await getPosts({ perPage: 20 });
-    return { posts };
+    const response = await getPosts({ perPage: 20 });
+    return { response };
   }
   render() {
-    return (
-      <Layout>
-        <PostList posts={this.props.posts} />
-      </Layout>
-    );
+    const { response } = this.props;
+    if (response.status === "ERROR") return <div>{response.errorMessage}</div>;
+    if (!response.data) return <div>Aucun résulat trouvé</div>;
+    return <Layout>{<PostList posts={this.props.response.data} />}</Layout>;
   }
 }
+
+export default withRouter(PostListPage);
