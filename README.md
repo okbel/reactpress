@@ -24,18 +24,19 @@ Install all the dependencies:
 npm install
 ```
 
-edit reactpress.config.js file.
-REACTPRESS_WORDPRESS_API_URL **MUST** points to your **REST API V2** Wordpress endpoint.
+start the dev server.
+
+```sh
+npm run dev
+```
+
+By default, reactpress uses a demo API, so code is working out of the box.
+To connect it to your own API, edit **reactpress.config.js** file.
+REACTPRESS_WORDPRESS_API_URL variable **MUST** points to a **REST API V2** Wordpress endpoint.
 
 ```js
 export default {
   REACTPRESS_WORDPRESS_API_URL:
     "https://public-api.wordpress.com/wp/v2/sites/reactpressapi.wordpress.com"
 };
-```
-
-start the dev server.
-
-```
-npm run dev
 ```
