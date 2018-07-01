@@ -12,7 +12,7 @@ class PostPage extends React.Component {
   render() {
     const { response } = this.props;
     if (response.status === "ERROR") return <div>{response.errorMessage}</div>;
-    if (!response.data) return <div>Aucun résulat trouvé</div>;
+    if (!response.data) return <div>No post found.</div>;
     return (
       <DefaultLayout>{<Post post={this.props.response.data} />}</DefaultLayout>
     );

@@ -1,7 +1,8 @@
 /**
  * Config file for next.js
  */
-import reactpressConfig from "./reactpress.config";
+const reactpressConfig = require("./reactpress.config");
+
 module.exports = {
   /* config options here */
   publicRuntimeConfig: {

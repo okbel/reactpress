@@ -19,14 +19,14 @@ export const getPosts = async options => {
     ...options
   };
   queryString = qs.stringify(newOptions);
-  let url = `${config.REACTPRESS_WORDPRESS_API_URL}/posts?${queryString}`;
+  const url = `${config.REACTPRESS_WORDPRESS_API_URL}/posts?${queryString}`;
   try {
     const { data } = await axios.get(url);
     response.data = data;
     response.status = REQUEST_STATUS_OK;
   } catch (e) {
     response.status = REQUEST_STATUS_ERROR;
-    response.errorMessage = e.message;
+    response.errorMessage = `${url} : ${e.message}`;
   }
   return response;
 };
@@ -38,16 +38,17 @@ export async function getPostBySlug(slug, options = null) {
     queryString = "&" + qs.stringify(options);
   }
   try {
-    const { data } = await axios.get(
-      `${config.REACTPRESS_WORDPRESS_API_URL}/posts?slug=${slug}${queryString}`
-    );
+    const url = `${
+      config.REACTPRESS_WORDPRESS_API_URL
+    }/posts?slug=${slug}${queryString}`;
+    const { data } = await axios.get(url);
     if (data.length > 0) {
       response.data = data[0];
     }
     response.status = REQUEST_STATUS_OK;
   } catch (e) {
     response.status = REQUEST_STATUS_ERROR;
-    response.errorMessage = e.message;
+    response.errorMessage = `${url} : ${e.message}`;
   }
   return response;
 }

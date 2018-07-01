@@ -11,7 +11,7 @@ class PostListPage extends React.Component {
   render() {
     const { response } = this.props;
     if (response.status === "ERROR") return <div>{response.errorMessage}</div>;
-    if (!response.data) return <div>Aucun résulat trouvé</div>;
+    if (!response.data) return <div>No post found</div>;
     return <Layout>{<PostList posts={this.props.response.data} />}</Layout>;
   }
 }
