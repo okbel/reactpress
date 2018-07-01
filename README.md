@@ -9,6 +9,7 @@ Start your SEO-friendly decoupled Wordpress site with React in minutes.
 - Posts.
 - Nices seo-friendly urls using wordpress slugs
 - SEO Friendly : Server Side Rendering with Next.js
+- page loader (progress bar)
 
 Planned :
 
