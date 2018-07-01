@@ -1,9 +1,11 @@
-// next.config.js
+/**
+ * Config file for next.js
+ */
+import reactpressConfig from "./reactpress.config";
 module.exports = {
   /* config options here */
   publicRuntimeConfig: {
-    SITE_NAME: "REACTPRESS DEMO BLOG",
-    WORDPRESS_API_URL:
-      "https://public-api.wordpress.com/wp/v2/sites/petitphilosophe.wordpress.com"
+    // our config for reactpress
+    ...reactpressConfig
   }
 };

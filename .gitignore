@@ -1,3 +1,4 @@
 node_modules
 .vscode
 .next
+reactpress.config.local.js

@@ -2,8 +2,6 @@ import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
 
-// common elements for all pages.
-// initialize loader
 Router.onRouteChangeStart = url => {
   console.log(`Loading: ${url}`);
   NProgress.start();
@@ -11,6 +9,12 @@ Router.onRouteChangeStart = url => {
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
+/**
+ * Common elements for all pages of your site.
+ * - customize head, meta ...
+ * - page loader with NProgress
+ * - global css or js ...
+ */
 const Page = ({ children }) => (
   <div>
     <Head>

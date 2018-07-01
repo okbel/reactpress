@@ -19,7 +19,7 @@ export const getPosts = async options => {
     ...options
   };
   queryString = qs.stringify(newOptions);
-  let url = `${config.WORDPRESS_API_URL}/posts?${queryString}`;
+  let url = `${config.REACTPRESS_WORDPRESS_API_URL}/posts?${queryString}`;
   try {
     const { data } = await axios.get(url);
     response.data = data;
@@ -39,7 +39,7 @@ export async function getPostBySlug(slug, options = null) {
   }
   try {
     const { data } = await axios.get(
-      `${config.WORDPRESS_API_URL}/posts?slug=${slug}${queryString}`
+      `${config.REACTPRESS_WORDPRESS_API_URL}/posts?slug=${slug}${queryString}`
     );
     if (data.length > 0) {
       response.data = data[0];
