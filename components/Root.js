@@ -1,9 +1,9 @@
 /**
- * Theme.js is the root component, used to put stuff that must
- * be include through all your pages : this is the place for
+ * Root.js is the root component, used to put stuff that must
+ * be available across all pages : for example
  * - globals css,
  * - globals js,
- * - special head meta
+ * - meta in head of the document
  * - etc
  */
 import Head from "next/head";
