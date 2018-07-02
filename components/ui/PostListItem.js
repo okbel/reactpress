@@ -11,7 +11,7 @@ const PostListItem = ({ post }) => (
     </style>
     <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
     <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-    <LinkButton href={`/post?slug=${post.slug}`} as={"post/" + post.slug}>
+    <LinkButton href={`/post?slug=${post.slug}`} as={"/post/" + post.slug}>
       Read more
     </LinkButton>
   </div>

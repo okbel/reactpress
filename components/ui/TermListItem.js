@@ -1,4 +1,9 @@
-const TermListItem = ({ term }) => <span style={styles.span}>{term.name}</span>;
+import Link from "next/link";
+const TermListItem = ({ term }) => (
+  <span style={styles.span}>
+    {term.name}
+  </span>
+);
 
 const styles = {
   span: {

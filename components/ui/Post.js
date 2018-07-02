@@ -1,5 +1,6 @@
 import AuthorList from "../ui/AuthorList";
 import TermList from "../ui/TermList";
+import TagList from "../ui/TagList";
 import moment from "moment";
 
 const Post = ({ post }) => (
@@ -22,7 +23,7 @@ const Post = ({ post }) => (
     {post._embedded["wp:term"][1].length > 0 && (
       <p>
         <em>
-          Tags: <TermList terms={post._embedded["wp:term"][1]} />
+          Tags: <TagList tags={post._embedded["wp:term"][1]} />
         </em>
       </p>
     )}
