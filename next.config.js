@@ -4,5 +4,4 @@ const reactpressConfig = require("./plugins/withReactpressConfig");
 /**
  * Config file for next.js
  */
-const config = withPlugins([css, reactpressConfig]);
-module.exports = config;
+module.exports = withPlugins([css, reactpressConfig]);
