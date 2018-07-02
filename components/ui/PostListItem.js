@@ -1,7 +1,4 @@
 import LinkButton from "../ui/LinkButton";
-import AuthorList from "../ui/AuthorList";
-import TermList from "../ui/TermList";
-import moment from "moment";
 
 const PostListItem = ({ post }) => (
   <div>
