@@ -18,7 +18,7 @@ By default, reactpress uses a demo API, so code is working out of the box. To co
 ```js
 export default {
   REACTPRESS_WORDPRESS_API_URL:
-    "https://public-api.wordpress.com/wp/v2/sites/reactpressapi.wordpress.com"
+    "https://dev-reactpress.pantheonsite.io/wp-json/wp/v2"
 };
 ```
 
