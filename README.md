@@ -1,4 +1,4 @@
-# WORDPRESS + REACT = REACTPRESS = 💛
+# WORDPRESS + REACT = REACTPRESS 💛
 
 Start a SEO-friendly Decoupled Wordpress with React in minutes.
 
