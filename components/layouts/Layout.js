@@ -1,10 +1,10 @@
 import Header from "../ui/Header";
-import Theme from "../../components/Theme";
+import Root from "../../components/Root";
 import Navigation from "../ui/Navigation";
 import Container from "../ui/Container";
 
 const Layout = ({ children }) => (
-  <Theme>
+  <Root>
     <Container>
       <Header>
         <h1>REACTPRESS DEMO</h1>
@@ -12,7 +12,7 @@ const Layout = ({ children }) => (
       <Navigation />
       <div>{children}</div>
     </Container>
-  </Theme>
+  </Root>
 );
 
 export default Layout;

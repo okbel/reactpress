@@ -1,6 +1,6 @@
-# WORPRESS + REACT = REACTPRESS <3
+# WORDPRESS REST API V2 + REACT = REACTPRESS <3
 
-SEO-friendly Decoupled Wordpress with React in minutes : **Reactpress** is a React starter front-end for **Wordpress REST API V2**.<br /><br />
+Start a SEO-friendly Decoupled Wordpress with React in minutes.
 
 ## Gettings started
 
@@ -10,8 +10,9 @@ npm install
 npm run dev
 ```
 
-By default, reactpress uses a demo API, so code is working out of the box.<br />
-To connect your own API, edit **reactpress.config.js** file and set
+You're ready to go ! You can now start working by looking / hacking / editing **pages** and **components** and **css** directories ! <br /><br />
+
+By default, reactpress uses a demo API, so code is working out of the box. To connect your own API, edit **reactpress.config.js** file and set
 **REACTPRESS_WORDPRESS_API_URL** so that is points to your **REST API V2** Wordpress api endpoint.
 
 ```js
@@ -20,10 +21,6 @@ export default {
     "https://public-api.wordpress.com/wp/v2/sites/reactpressapi.wordpress.com"
 };
 ```
-
-You're ready to go ! You can now start working by looking / hacking / editing **pages** and **themes/minimalist** directories !
-
-You can also create you own theme if you wish, see THEMES section below.
 
 ## Features
 
@@ -49,27 +46,4 @@ there several available ways to manage your css with Reactpress
 
 ```js
 import "../css/globals.css";
-```
-
-## THEMES
-
-Reactpress comes with a default "minimalist" theme (./themes/minimalist).
-You can copy paste this theme and create your own, all you need is edit .babelrc file
-and change @theme alias.
-
-```json
-{
-  "presets": ["next/babel"],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./"],
-        "alias": {
-          "@theme": "./themes/minimalist"
-        }
-      }
-    ]
-  ]
-}
 ```

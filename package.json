@@ -1,12 +1,12 @@
 {
   "name": "reactpress",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React press is a starter for wordpress + react , using Next.js",
   "main": "index.js",
   "scripts": {
     "dev": "node server.js",
     "build": "node_modules/.bin/next build",
-    "start": "node_modules/.bin/next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "author": "",
   "license": "ISC",
