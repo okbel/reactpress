@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
+import "./css/globals.css";
+import "./css/nprogress.css";
 
 Router.onRouteChangeStart = url => {
   NProgress.start();
@@ -14,15 +16,6 @@ Router.onRouteChangeError = () => NProgress.done();
  * - page loader with NProgress
  * - global css or js ...
  */
-const Page = ({ children }) => (
-  <div>
-    <Head>
-      <link rel="stylesheet" href="/static/styles.css" type="text/css" />
-      <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    {children}
-  </div>
-);
+const Page = ({ children }) => <div>{children}</div>;
 
 export default Page;
