@@ -1,7 +1,7 @@
 import { getPostBySlug } from "../services/wordpressClient";
 import { withRouter } from "next/router";
-import DefaultLayout from "../themes/minimalist/components/layouts/Layout";
-import Post from "../themes/minimalist/components/ui/Post";
+import DefaultLayout from "@theme/components/layouts/Layout";
+import Post from "@theme/components/ui/Post";
 
 class PostPage extends React.Component {
   static async getInitialProps({ query }) {
