@@ -60,3 +60,31 @@ export async function getPostBySlug(slug, options = {}) {
   }
   return response;
 }
+
+export async function getTagBySlug(slug, options = {}) {
+  const response = new ApiResponse();
+  let queryString = "";
+  const defaultOptions = {
+    // add a "embedded" key with fully loaded authors, terms etc
+    _embed: true
+  };
+  const newOptions = {
+    ...defaultOptions,
+    ...options
+  };
+  queryString = "&" + qs.stringify(newOptions);
+  try {
+    const url = `${
+      config.REACTPRESS_WORDPRESS_API_URL
+    }/tags?slug=${slug}${queryString}`;
+    const { data } = await axios.get(url);
+    if (data.length > 0) {
+      response.data = data[0];
+    }
+    response.status = REQUEST_STATUS_OK;
+  } catch (e) {
+    response.status = REQUEST_STATUS_ERROR;
+    response.errorMessage = `${url} : ${e.message}`;
+  }
+  return response;
+}
