@@ -3,7 +3,7 @@ const CategoryListItem = ({ term }) => (
   <span style={styles.span}>
     <Link
       href={`/category?slug=${term.slug}`}
-      as={`/categoy/${term.slug}`}
+      as={`/category/${term.slug}`}
       prefetch
     >
       <a>{term.name}</a>
