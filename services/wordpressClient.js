@@ -61,6 +61,44 @@ export async function getPostBySlug(slug, options = {}) {
   return response;
 }
 
+export async function getPostsByTagId(tagId, options = {}) {
+  const response = new ApiResponse();
+  const newOptions = {
+    ...options,
+    tags: tagId
+  };
+  return await getPosts({ tags: tagId });
+}
+
+export async function getPostsByTagSlug(tagSlug, options = {}) {
+  const response = new ApiResponse();
+  response.data = {
+    tag: null,
+    posts: null
+  };
+  // first get the full tag object
+  const tagResponse = await getTagBySlug(tagSlug);
+  if (tagResponse === REQUEST_STATUS_ERROR) {
+    return { tagResponse };
+  }
+  if (tagResponse.data === null) {
+    return tagResponse;
+  }
+  response.data.tag = tagResponse.data;
+  // now get all posts related to that tag
+  const newOptions = {
+    ...options,
+    tags: tagResponse.data.id
+  };
+  const postsResponse = await getPosts(newOptions);
+  if (postsResponse === "ERROR") {
+    return postsResponse;
+  }
+  response.status = REQUEST_STATUS_OK;
+  response.data.posts = postsResponse.data;
+  return response;
+}
+
 export async function getTagBySlug(slug, options = {}) {
   const response = new ApiResponse();
   let queryString = "";
