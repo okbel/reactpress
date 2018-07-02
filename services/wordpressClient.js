@@ -33,7 +33,7 @@ export const getPosts = async options => {
   return response;
 };
 
-export async function getPostBySlug(slug, options = null) {
+export async function getPostBySlug(slug, options = {}) {
   const response = new ApiResponse();
   let queryString = "";
   const defaultOptions = {
@@ -44,9 +44,7 @@ export async function getPostBySlug(slug, options = null) {
     ...defaultOptions,
     ...options
   };
-  if (newOptions) {
-    queryString = "&" + qs.stringify(options);
-  }
+  queryString = "&" + qs.stringify(newOptions);
   try {
     const url = `${
       config.REACTPRESS_WORDPRESS_API_URL
