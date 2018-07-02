@@ -16,6 +16,12 @@ app
       app.render(req, res, actualPage, queryParams);
     });
 
+    server.get("/page/:slug", (req, res) => {
+      const actualPage = "/page";
+      const queryParams = { slug: req.params.slug };
+      app.render(req, res, actualPage, queryParams);
+    });
+
     server.get("/tag/:slug", (req, res) => {
       const actualPage = "/tag";
       const queryParams = { slug: req.params.slug };

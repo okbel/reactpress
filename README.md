@@ -26,7 +26,8 @@ export default {
 
 ### current features
 
-- Posts list and full page.
+- Posts list, posts lists by category, posts lists by tag
+- Page
 - SEO Friendly : Server Side Rendering with Next.js
 - Nices seo-friendly urls using wordpress slugs
 - Page loader (progress bar)
