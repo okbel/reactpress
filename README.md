@@ -41,3 +41,37 @@ export default {
 - comments
 - pages
 - authentification
+
+## CSS
+
+there several available ways to manage your css with Reactpress
+
+- css-in-js with styled-jsx, which is shipped by default with Next : https://github.com/zeit/styled-jsx
+- you can create classic css files and import them like this :
+
+```js
+import "../css/globals.css";
+```
+
+## THEMES
+
+Reactpress comes with a default "minimalist" theme (./themes/minimalist).
+You can copy paste this theme and create your own, all you need is edit .babelrc file
+and change @theme alias.
+
+```json
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@theme": "./themes/minimalist"
+        }
+      }
+    ]
+  ]
+}
+```

@@ -1,6 +1,6 @@
 import { getPosts } from "../services/wordpressClient";
-import Layout from "../themes/minimalist/components/layouts/Layout";
-import PostList from "../themes/minimalist/components/ui/PostList";
+import Layout from "@theme/components/layouts/Layout";
+import PostList from "@theme/components/ui/PostList";
 import { withRouter } from "next/router";
 
 class PostListPage extends React.Component {
