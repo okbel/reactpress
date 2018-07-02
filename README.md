@@ -1,8 +1,10 @@
 # WORPRESS + REACT = REACTPRESS <3
 
-React.js with WordPress as a Backend.<br /><br />
+Decoupled Wordpress with React in minutes : **Reactpress** is a React starter front-end for **Wordpress REST API V2**.<br /><br />
 
-**Reactpress** is a minimalist React starter front-end for **Wordpress REST API V2**.<br /><br />
+This is a minimalist MVP and i am waiting for users feedbacks to determine how best to move forward. If your are interested by this project please get in touch with me and let me know what features matters most for you, or simply add a star to this project to make me know you are interested.
+
+## SEO matters
 
 It is designed from the ground to be SEO-friendly, thanks to Next.js ( Server Side Rendering ) and friendly urls built upon wordpress slugs.
 
