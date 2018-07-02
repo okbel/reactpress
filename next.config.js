@@ -1,12 +1,7 @@
+const withPlugins = require("next-compose-plugins");
+const css = require("@zeit/next-css");
+const reactpressConfig = require("./plugins/withReactpressConfig");
 /**
  * Config file for next.js
  */
-let reactpressConfig = require("./reactpress.config");
-
-module.exports = {
-  /* config options here */
-  publicRuntimeConfig: {
-    // our config for reactpress
-    ...reactpressConfig
-  }
-};
+module.exports = withPlugins([css, reactpressConfig]);
