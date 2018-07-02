@@ -7,7 +7,7 @@ const Layout = ({ children }) => (
   <Theme>
     <Container>
       <Header>
-        <h1>Header du site</h1>
+        <h1>REACTPRESS DEMO</h1>
       </Header>
       <Navigation />
       <div>{children}</div>

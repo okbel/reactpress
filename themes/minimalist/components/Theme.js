@@ -20,12 +20,13 @@ Router.onRouteChangeStart = url => {
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-/**
- * This is the place for common elements for all pages of your site.
- * - customize head, meta ...
- * - page loader with NProgress
- * - global css or js ...
- */
-const Theme = ({ children }) => <div>{children}</div>;
+const Theme = ({ children }) => (
+  <div>
+    <Head>
+      <title>REACTPRESS DEMO</title>
+    </Head>
+    {children}
+  </div>
+);
 
 export default Theme;
