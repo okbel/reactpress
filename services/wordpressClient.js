@@ -9,13 +9,13 @@ import ApiResponse, {
 
 export const getPosts = async options => {
   const response = new ApiResponse();
+  let queryString = "";
   const defaultOptions = {
     per_page: 10,
     page: 1,
     // add a "embedded" key with fully loaded authors, terms etc
     _embed: true
   };
-  let queryString = "";
   const newOptions = {
     ...defaultOptions,
     ...options
@@ -36,7 +36,15 @@ export const getPosts = async options => {
 export async function getPostBySlug(slug, options = null) {
   const response = new ApiResponse();
   let queryString = "";
-  if (options) {
+  const defaultOptions = {
+    // add a "embedded" key with fully loaded authors, terms etc
+    _embed: true
+  };
+  const newOptions = {
+    ...defaultOptions,
+    ...options
+  };
+  if (newOptions) {
     queryString = "&" + qs.stringify(options);
   }
   try {
