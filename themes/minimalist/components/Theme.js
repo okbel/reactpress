@@ -9,6 +9,7 @@
 import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
+import "../css/typography.css";
 import "../css/globals.css";
 import "../css/nprogress.css";
 
