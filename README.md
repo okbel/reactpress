@@ -1,4 +1,4 @@
-# WORDPRESS REST API V2 + REACT = REACTPRESS <3
+# WORDPRESS + REACT = REACTPRESS = 💛
 
 Start a SEO-friendly Decoupled Wordpress with React in minutes.
 
