@@ -1,22 +1,23 @@
-import { getPostsByCategorySlug } from "../services/wordpressClient";
 import { withRouter } from "next/router";
 import DefaultLayout from "../components/layouts/Layout";
 import PostList from "../components/ui/PostList";
+import wpapi from "../services/wpapi";
 
 class categoryPage extends React.Component {
   static async getInitialProps({ query }) {
-    const response = await getPostsByCategorySlug(query.slug, {});
-    console.log(response);
-    return { response };
+    const categories = await wpapi.categories().slug(query.slug);
+    const category = categories[0];
+    const posts = await wpapi
+      .posts()
+      .categories(category.id)
+      .embed();
+    return { category, posts };
   }
   render() {
-    const { response } = this.props;
-    if (response.status === "ERROR") return <div>{response.errorMessage}</div>;
-    if (response.data.posts === null) return <div>No post found.</div>;
     return (
       <DefaultLayout>
-        <h1>{response.data.category.name}</h1>
-        {<PostList posts={response.data.posts} />}
+        <h1>{this.props.category.name}</h1>
+        {<PostList posts={this.props.posts} />}
       </DefaultLayout>
     );
   }

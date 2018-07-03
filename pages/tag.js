@@ -1,21 +1,23 @@
-import { getPostsByTagSlug } from "../services/wordpressClient";
 import { withRouter } from "next/router";
 import DefaultLayout from "../components/layouts/Layout";
 import PostList from "../components/ui/PostList";
+import wpapi from "../services/wpapi";
 
 class TagPage extends React.Component {
   static async getInitialProps({ query }) {
-    const response = await getPostsByTagSlug(query.slug, {});
-    return { response };
+    const tags = await wpapi.tags().slug(query.slug);
+    const tag = tags[0];
+    const posts = await wpapi
+      .posts()
+      .tags(tag.id)
+      .embed();
+    return { tag, posts };
   }
   render() {
-    const { response } = this.props;
-    if (response.status === "ERROR") return <div>{response.errorMessage}</div>;
-    if (response.data.posts === null) return <div>No post found.</div>;
     return (
       <DefaultLayout>
-        <h1>{response.data.tag.name}</h1>
-        {<PostList posts={response.data.posts} />}
+        <h1>{this.props.tag.name}</h1>
+        {<PostList posts={this.props.posts} />}
       </DefaultLayout>
     );
   }

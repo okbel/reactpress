@@ -1,8 +1,5 @@
 module.exports = {
-  // use demo site from wp-api
-  REACTPRESS_WORDPRESS_API_URL:
-    "https://dev-reactpress.pantheonsite.io/wp-json/wp/v2",
-  wordpressUrl: "https://dev-reactpress.pantheonsite.io",
+  // used by ./services/wpapi to create api url
   wordpressUrl: "https://dev-reactpress.pantheonsite.io",
   siteInformations: {
     name: "REACTPRESS",
