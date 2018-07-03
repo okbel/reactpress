@@ -30,7 +30,7 @@ let MenuRight = ({ links }) => (
     <ul className="linksUl">
       {links.map(link => (
         <li key={link.href} className="linksLi">
-          <Link href={link.href}>
+          <Link href={link.href} as={link.as}>
             <a>{link.title}</a>
           </Link>
         </li>

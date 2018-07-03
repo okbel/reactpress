@@ -14,18 +14,14 @@ const Post = ({ post }) => (
     </p>
     <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
     {post._embedded["wp:term"][0].length > 0 && (
-      <p>
-        <em>
-          Catégories: <CategoryList terms={post._embedded["wp:term"][0]} />
-        </em>
-      </p>
+      <div>
+        Catégories: <CategoryList terms={post._embedded["wp:term"][0]} />
+      </div>
     )}
     {post._embedded["wp:term"][1].length > 0 && (
-      <p>
-        <em>
-          Tags: <TagList tags={post._embedded["wp:term"][1]} />
-        </em>
-      </p>
+      <div>
+        Tags: <TagList tags={post._embedded["wp:term"][1]} />
+      </div>
     )}
   </div>
 );

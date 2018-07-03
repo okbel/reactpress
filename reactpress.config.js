@@ -3,7 +3,7 @@ module.exports = {
   REACTPRESS_WORDPRESS_API_URL:
     "https://dev-reactpress.pantheonsite.io/wp-json/wp/v2",
   siteInformations: {
-    name: "Reactpress",
+    name: "REACTPRESS",
     slogan: "Start a SEO-friendly decoupled Wordpress with React in minutes"
   },
   mainMenuLinks: [
@@ -12,14 +12,9 @@ module.exports = {
       href: "/"
     },
     {
-      title: "Politique de confidentialité",
-      href: "/page?slug=politique-de-confidentialite",
-      as: "/page/politique-de-confidentialite"
-    },
-    {
-      title: "Page de démonstration",
-      href: "/page?slug=une-page-de-demonstration",
-      as: "/page/une-page-de-demonstration"
+      title: "About",
+      href: "/page?slug=about",
+      as: "/page/about"
     }
   ],
   ui: {

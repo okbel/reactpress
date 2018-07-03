@@ -4,13 +4,18 @@ import Container from "../ui/Container";
 import config from "../../services/publicConfig";
 
 const Layout = ({ children }) => (
-  <Container>
+  <div>
     <Header>
-      <h1>REACTPRESS DEMO</h1>
+      <Container>
+        <h1>{config.siteInformations.name}</h1>
+        <h2>{config.siteInformations.slogan}</h2>
+      </Container>
     </Header>
-    <Navigation links={config.mainMenuLinks} />
-    <div>{children}</div>
-  </Container>
+    <Container>
+      <Navigation links={config.mainMenuLinks} />
+      <div>{children}</div>
+    </Container>
+  </div>
 );
 
 export default Layout;
