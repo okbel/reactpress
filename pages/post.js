@@ -1,21 +1,19 @@
-import { getPostBySlug } from "../services/wordpressClient";
 import { withRouter } from "next/router";
 import DefaultLayout from "../components/layouts/Layout";
 import Post from "../components/ui/Post";
+import wpapi from "../services/wpapi";
 
 class PostPage extends React.Component {
   static async getInitialProps({ query }) {
-    const response = await getPostBySlug(query.slug);
-    return { response };
+    const posts = await wpapi
+      .posts()
+      .slug(query.slug)
+      .embed();
+    return { post: posts[0] };
   }
 
   render() {
-    const { response } = this.props;
-    if (response.status === "ERROR") return <div>{response.errorMessage}</div>;
-    if (!response.data) return <div>No post found.</div>;
-    return (
-      <DefaultLayout>{<Post post={this.props.response.data} />}</DefaultLayout>
-    );
+    return <DefaultLayout>{<Post post={this.props.post} />}</DefaultLayout>;
   }
 }
 

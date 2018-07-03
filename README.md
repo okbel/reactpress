@@ -4,6 +4,17 @@ Start a SEO-friendly Decoupled Wordpress with React in minutes.
 
 ## Gettings started
 
+### make sur CORS is enabled on Wordpress
+
+add this to your wp-config.php to make sure CORS are enabled :
+
+```php
+// allow CORS
+header("Access-Control-Allow-Origin: *");
+```
+
+### install
+
 ```sh
 npm install
 # start the dev server.
