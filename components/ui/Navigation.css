@@ -1,13 +1,6 @@
-@media (max-width: 900px) {
-  .main-menu {
-    display: block;
-    text-align: center;
-  }
-  .main-menu .navigationContainer {
-    display: block;
-  }
+.main-menu {
+  margin: 2rem;
 }
-
 .main-menu .linksUl {
   padding: 0;
   margin: 0;
@@ -18,12 +11,19 @@
 .main-menu a {
   margin: 0 1rem;
 }
+
 @media (max-width: 900px) {
+  .main-menu {
+    text-align: center;
+  }
   .main-menu .linksUl {
     display: block;
   }
   .main-menu .linksLi {
     display: block;
     text-align: center;
+  }
+  .main-menu .navigationContainer {
+    display: block;
   }
 }

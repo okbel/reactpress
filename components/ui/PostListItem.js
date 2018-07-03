@@ -1,7 +1,7 @@
 import LinkButton from "../ui/LinkButton";
 
 const PostListItem = ({ post }) => (
-  <div>
+  <div style={{ marginBottom: "2rem" }}>
     <style>
       {/* hack to hide default more-link button from wordpress*/}
       {".more-link{display:none}"}
