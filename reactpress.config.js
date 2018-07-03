@@ -13,11 +13,13 @@ module.exports = {
     },
     {
       title: "Politique de confidentialité",
-      href: "/page/politique-de-confidentialite"
+      href: "/page?slug=politique-de-confidentialite",
+      as: "/page/politique-de-confidentialite"
     },
     {
       title: "Page de démonstration",
-      href: "/page/une-page-de-demonstration/"
+      href: "/page?slug=une-page-de-demonstration",
+      as: "/page/une-page-de-demonstration"
     }
   ],
   ui: {
