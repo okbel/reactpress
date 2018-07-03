@@ -14,6 +14,11 @@ module.exports = {
       title: "About",
       href: "/page?slug=about",
       as: "/page/about"
+    },
+    {
+      title: "Github",
+      href: "https://github.com/nyl-auster/reactpress",
+      as: ""
     }
   ],
   ui: {
