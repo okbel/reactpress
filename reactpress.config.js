@@ -8,7 +8,7 @@ module.exports = {
   },
   mainMenuLinks: [
     {
-      title: "Blog",
+      title: "Home",
       href: "/"
     },
     {

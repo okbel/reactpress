@@ -1,10 +1,3 @@
-.main-menu {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-.main-menu .navRegion {
-}
 @media (max-width: 900px) {
   .main-menu {
     display: block;
@@ -17,20 +10,15 @@
 
 .main-menu .linksUl {
   padding: 0;
+  margin: 0;
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .main-menu a {
-  margin-right: 1rem;
-  text-decoration: none;
+  margin: 0 1rem;
 }
 @media (max-width: 900px) {
-  .main-menu a {
-    text-decoration: 0 none;
-    padding: 0.5rem 0;
-    margin-right: 0;
-  }
   .main-menu .linksUl {
     display: block;
   }

@@ -34,9 +34,8 @@ export default {
 
 ### planned features
 
-- comments
-- pages
 - authentification
+- comments
 
 ## CSS
 

@@ -17,17 +17,7 @@ let Navigation = class extends React.Component {
   };
   render() {
     const { classes, links } = this.props;
-    return (
-      <div className="main-menu">
-        <div className="nav-Region">
-          <Link href="/">
-            <a>{config.siteInformations.name}</a>
-          </Link>
-        </div>
-        <div className="navRegion" />
-        <div className="navRegion">{<MenuRight links={links} />}</div>
-      </div>
-    );
+    return <div className="main-menu">{<MenuRight links={links} />}</div>;
   }
 };
 
