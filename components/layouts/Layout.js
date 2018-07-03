@@ -11,10 +11,12 @@ const Layout = ({ children }) => (
         <h2>{config.siteInformations.slogan}</h2>
       </Container>
     </Header>
-    <Container>
-      <Navigation links={config.mainMenuLinks} />
-      <div>{children}</div>
-    </Container>
+    <div style={{ paddingBottom: "4rem" }}>
+      <Container>
+        <Navigation links={config.mainMenuLinks} />
+        <div>{children}</div>
+      </Container>
+    </div>
   </div>
 );
 
