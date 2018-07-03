@@ -1,6 +1,6 @@
 {
   "name": "reactpress",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "React press is a starter for wordpress + react , using Next.js",
   "main": "index.js",
   "scripts": {
