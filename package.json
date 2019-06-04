@@ -1,0 +1,56 @@
+{
+  "name": "reactpress",
+  "version": "0.0.1",
+  "description": "A one-click front-end for your Wordpress.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "generate": "gql-gen --config codegen.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
+    "apollo-boost": "^0.4.1",
+    "apollo-link-context": "^1.0.17",
+    "apollo-link-error": "^1.1.10",
+    "apollo-link-http": "^1.5.14",
+    "graphql": "^14.3.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "8.1.0",
+    "nodemon": "^1.19.1",
+    "react": "16.8.6",
+    "react-apollo": "^2.5.6",
+    "react-apollo-hooks": "^0.4.5",
+    "react-dom": "16.8.6",
+    "styled-components": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/next": "^8.0.5",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "graphql-code-generator": "^0.18.2",
+    "graphql-codegen-typescript-client": "^0.18.2",
+    "graphql-codegen-typescript-common": "^0.18.2",
+    "graphql-codegen-typescript-react-apollo": "^0.18.2",
+    "ts-node": "^8.2.0",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "3.5.1",
+    "@types/node": "^12.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itstimetogoleft/reactpress.git"
+  },
+  "keywords": [
+    "Wordpress"
+  ],
+  "author": "Itstimetogoleft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itstimetogoleft/reactpress/issues"
+  },
+  "homepage": "https://github.com/itstimetogoleft/reactpress#readme"
+}
