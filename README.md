@@ -1,4 +1,6 @@
-# ReactPress ( Rest API edition )
+**WARNING**: The current version is very much a WIP, this is NOT DONE (not even close). It will undergo many api modifications in the near future, while you are encouraged to use it, remember the possibility of these changes. The docs are not entirely updated, and there WILL be bugs! You can go and look around the different branchs to find a more working (but old) approach.
+
+# ReactPress
 
 **Reactpress** is a starter-kit to create a Next.js ( **SEO-friendly** React ) front-end backed by the Wordpress Graphql Plugin. 
 
