@@ -4,9 +4,9 @@
   "description": "A one-click front-end for your Wordpress.",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next ./src",
+    "build": "next build ./src",
+    "start": "next start ./src",
     "generate": "gql-gen --config codegen.yml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

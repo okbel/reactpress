@@ -1,0 +1,1 @@
+export const WORDPRESS_GRAPHQL_BACKEND = 'https://www.netizendrama.com/graphql'
