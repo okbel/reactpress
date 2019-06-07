@@ -2,25 +2,23 @@
 
 # ReactPress
 
-**Reactpress** is a starter-kit to create a Next.js ( **SEO-friendly** React ) front-end backed by the Wordpress Graphql Plugin. 
+**Reactpress** is a starter-kit to create a Next.js ( **SEO-optimized** React ) front-end backed by the Wordpress Graphql Plugin. The aim of the repository is to achieve a one-click front-end solution. 
 
 *Reactpress* is built upon [Next.js](https://github.com/zeit/next.js/) for Server Side Rendering, so if your are not familiar with Next.js, you should take a quick look at it. ⚡ 
 
-<center>
 
 |                    REACT                     |                    NEXT                     |                    WORDPRESS                     |
 | :------------------------------------------: | :-----------------------------------------: | :----------------------------------------------: |
 | <img height="80" src="./images/react.svg" /> | <img height="70" src="./images/next.png" /> | <img height="70" src="./images/wordpress.svg" /> |
 
-</center>
 
 
 ## GETTING STARTED
 
 ### Install and configure Wordpress
 
-- Enable wp-graphql extension : https://wpgraphql.com/docs/getting-started/install-and-activate/
-- Add this to your wp-config.php to make sure CORS are enabled :
+- Enable wp-graphql extension: https://wpgraphql.com/docs/getting-started/install-and-activate/
+- Add the following to your wp-config.php to make sure CORS is enabled and pointing to your front-end or `*`:
 
 ```php
 // allow CORS
@@ -30,26 +28,31 @@ header("Access-Control-Allow-Origin: *");
 ### Install ReactPress
 
 ```sh
-npm install
-# start the dev server.
-npm run dev
+yarn
+# start the development server.
+yarn dev
 ```
 
-By default, reactpress uses a demo API. To connect your own API, edit **reactpress.config.js** file and edit variable **wordpressGraphqlEndpoint** so that it points to your wordpress graphql endpoint.
+By default, reactpress will use a demo API. To connect your own API, create a `constants.ts` file on the `lib` folder and add a constant called: **WORDPRESS_GRAPHQL_BACKEND** so that it points to your wordpress graphql endpoint.
 
-```js
-export default {
-  wordpressGraphqlEndpoint: "https://dev-reactpress.pantheonsite.io/graphql"
-};
+```ts
+const WORDPRESS_GRAPHQL_BACKEND= "https://www.yourwebsite.com/graphql"
 ```
 
-You're ready to go ! You can now start working by looking / hacking / editing files from **themes/starter** directory.
+Make sure to insert the correc URL (Pay attention on HTTPS, www redirects, etc...)
+
+If everything is installed correctly you are ready to go.
 
 ## Features
 
-- 🧘 SEO Friendly : Server Side Rendered with Next.js
-- ⚡️ Post, Posts list, posts by category, posts by tag
-- 💅 **Easy to customize.** Create and use real customizable themes.
+- 🧘 SEO Friendly: Server Side Rendered with Next.js.
+- ⚡️ Posts, categories, posts by category and posts by tag.
+
+### Planned Features
+
+- Themes
+- Easy to add plugins (Like Google Analytics, Adsense, etc...)
+- Caching content.
 
 ## CSS
 
@@ -61,18 +64,17 @@ There are several available ways to manage your css with Next.js.
 import "../css/globals.css";
 ```
 
-- *css-in-js* available through styled-components.
+Or approach them the *css-in-js* way, which is available through styled-components.
 
 ## Deployment
 
 ```sh
 # compile for production
-npm run build
+yarn build
 
 # start the production server
-npm run start
+yarn start
 ```
-
-*Reactpress* needs a node server, because on the first page load, html is served by a node server (that's why search engines are able to crawl your content).
-
-If you don't want to manage a server yourself, Next.js plays really well with `now` : this is a very easy way to deploy a *next.js* app : https://zeit.co/now
+*Main contributors*:
+yann-yinn
+itstimetogoleft

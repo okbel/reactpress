@@ -1,6 +1,8 @@
 import { ApolloClient, HttpLink, InMemoryCache } from "apollo-boost";
 import fetch from "isomorphic-unfetch";
+import { WORDPRESS_GRAPHQL_BACKEND } from './constants';
 import { isBrowser } from "./isBrowser";
+
 
 let apolloClient = null;
 
@@ -17,7 +19,7 @@ function create(initialState: any) {
         //@ts-ignore
         ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
         link: new HttpLink({
-            uri: process.env.WORDPRESS_GRAPHQL_BACKEND, // Server URL (must be absolute)
+            uri: WORDPRESS_GRAPHQL_BACKEND, // Server URL (must be absolute)
             credentials: "same-origin" // Additional fetch() options like `credentials` or `headers`
         }),
         cache: new InMemoryCache().restore(initialState || {})
