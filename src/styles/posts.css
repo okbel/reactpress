@@ -1,0 +1,7 @@
+.wp-block-image {
+display: block;
+border: 1px solid red;
+max-width:720px;
+margin: 0 auto;
+
+}
